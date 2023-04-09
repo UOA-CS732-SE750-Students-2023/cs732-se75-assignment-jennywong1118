@@ -21,6 +21,7 @@ nav>div {
     @apply justify-between;
     @apply h-16;
     @apply px-4;
+    @apply bg-gray-900;
 }
 
 nav h1 {
@@ -55,11 +56,22 @@ nav button {
 .container-sm {
     @apply container;
     @apply max-w-xl;
+    @apply bg-gray-900;
+    
 }
 
 .message {
-    @apply my-2;
-    @apply w-full;
+    @apply flex-grow;
+    @apply m-6;
+    @apply py-1;
+    @apply px-1;
+    @apply mr-6;
+    @apply ml-6;
+    @apply rounded;
+    @apply border-none;
+    @apply bg-gray-700;
+    @apply text-white;
+
 }
 
 .message span {
