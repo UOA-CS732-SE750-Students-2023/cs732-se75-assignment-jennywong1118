@@ -1,4 +1,4 @@
-# vue-firebase-chat
+# CS732 Tech Demo vue-firebase-chat
 
 ## New Google account for the Tech Demo 
 For simplicity, i have created a new Google account for connecting to Firebase.
@@ -19,6 +19,10 @@ npm install -g @vue/cli
 ```
 
 ## Project setup
+Clone this repo
+   https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository
+
+
 Install all the dependencies
 ```
 npm install

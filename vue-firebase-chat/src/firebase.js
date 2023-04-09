@@ -1,8 +1,15 @@
 import { initializeApp } from "firebase/app";
-import { getAuth, GoogleAuthProvider } from "firebase/auth";
-import { getFirestore, collection, addDoc, query, orderBy, limit} from "firebase/firestore";
+import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import {
+  getFirestore,
+  collection,
+  addDoc,
+  query,
+  orderBy,
+  limit,
+  onSnapshot
+} from "firebase/firestore";
 
-// eslint-disable-next-line
 import { ref, onUnmounted, computed } from "vue";
 
 const firebaseConfig = {
@@ -31,10 +38,15 @@ export function useAuth() {
   const isLogin = computed(() => user.value !== null);
 
   const signIn = async () => {
-    const googleProvider = new GoogleAuthProvider();
+    // Sign in using a popup.
+    const provider = new GoogleAuthProvider();
     try {
-      const result = await auth.signInWithPopup(googleProvider);
-      user.value = result.user;
+      provider.addScope("profile");
+      provider.addScope("email");
+      await signInWithPopup(auth, provider);
+
+      // The signed-in user info.
+      //const user = result.user;
     } catch (error) {
       console.error(error);
     }
@@ -45,11 +57,15 @@ export function useAuth() {
 }
 
 const messagesCollection = collection(db, "messages");
-const messagesQuery = query(messagesCollection, orderBy("createdAt", "desc"), limit(100));
+const messagesQuery = query(
+  messagesCollection,
+  orderBy("createdAt", "desc"),
+  limit(100)
+);
 
 export function useChat() {
   const messages = ref([]);
-  const unsubscribe = messagesQuery.onSnapshot((snapshot) => {
+  const unsubscribe = onSnapshot(messagesQuery, (snapshot) => {
     messages.value = snapshot.docs
       .map((doc) => ({ id: doc.id, ...doc.data() }))
       .reverse();
