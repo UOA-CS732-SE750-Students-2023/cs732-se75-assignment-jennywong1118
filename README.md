@@ -21,7 +21,7 @@ npm install -g @vue/cli
 
 ## Project setup
 Clone this repo
-   https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository
+   https://github.com/UOA-CS732-SE750-Students-2023/cs732-se75-assignment-jennywong1118.git
 
 
 Install all the dependencies
