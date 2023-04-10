@@ -4,6 +4,7 @@
 
 body, html {
     @apply max-w-xl;
+    @apply bg-green-900;
   }
 
 nav {
@@ -64,7 +65,7 @@ nav button {
 .container-sm {
     @apply container;
     @apply max-w-xl;
-    @apply bg-green-900;
+    
     
 }
 
