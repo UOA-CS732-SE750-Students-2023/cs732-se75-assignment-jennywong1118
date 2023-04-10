@@ -16,7 +16,8 @@ To install Vue.js, you need to have Node.js and NPM (Node Package Manager) insta
 Open your command prompt (Windows) or terminal (macOS/Linux).
 Type the following command to install Vue CLI globally:
 ```
-npm install -g @vue/cli
+npm install -g @vue/cli OR
+sudo npm install -g @vue/cli
 ```
 
 ## Project setup
@@ -51,4 +52,5 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
 
