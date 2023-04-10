@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body, html {
+    @apply max-w-xl;
+  }
+
 nav {
     @apply fixed;
     @apply w-full;
@@ -98,6 +102,7 @@ nav button {
     @apply bg-gray-900;
     @apply shadow-lg;
     @apply w-full;
+    
 }
 
 .bottom form {
