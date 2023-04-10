@@ -1,7 +1,7 @@
 <template>
   <nav>
     <div>
-      <h1><strong>Vue</strong> Firebase Chat App</h1>
+      <h1><strong>Vue</strong> <strong><span>Firebase</span></strong> Chat App</h1>
 
       <div v-if="isLogin" class="login">
         <Avatar :src="user.photoURL" />

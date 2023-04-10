@@ -33,6 +33,10 @@ nav h1>strong {
     @apply text-green-300;
 }
 
+nav h1>strong span {
+    @apply text-yellow-500;
+}
+
 nav .login {
     @apply right-0;
     @apply flex;
@@ -56,7 +60,7 @@ nav button {
 .container-sm {
     @apply container;
     @apply max-w-xl;
-    @apply bg-gray-900;
+    @apply bg-green-900;
     
 }
 
@@ -84,6 +88,7 @@ nav button {
     @apply mx-2;
     @apply p-2;
     @apply rounded-lg;
+    @apply bg-gray-500;
     @apply text-white;
 }
 
