@@ -53,4 +53,12 @@ npm run lint
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
+## About the Author
+
+Ching Yi WONG (Jenny)
+
+cwon301@aucklanduni.ac.nz
+
+Feel free to contact me if you have any question. Thank you!
+
 
